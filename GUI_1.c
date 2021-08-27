@@ -67,11 +67,7 @@ static void button1_callback( GtkWidget *widget, gpointer data ) {
     
     json_str = json_object_to_json_string_ext( json_obj, JSON_C_TO_STRING_PRETTY);
     printf( "%s\n\n", json_str );
-    
-    /*result = mosquitto_publish(mosq, NULL, fname, strlen(json_str), json_str,0,0);
-    if (result !=0){
-		fprintf(stderr, "MQTT publish error: %d\n", result );
-	}*/
+   
 	json_object_put( json_obj);
 }
 
